@@ -1,0 +1,2 @@
+# Set Outputs for 8 Relay Module
+gpio=23,22,27,18,17,15,14,4=op,dh

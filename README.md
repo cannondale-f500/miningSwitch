@@ -39,3 +39,9 @@ Mit dem Befehl `pyhton3 pconoff.py 1` Kann das jeweilige Relay angesteuert werde
 * PC Ausschalten mit 5s Ein
 * Wartezeit mit 30s
 * PC Einschalten 0.5s Ein
+
+### Android:
+Far Commander
+
+### Apple
+Termius - SSH client 

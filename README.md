@@ -30,7 +30,9 @@ Pin Nummer | Pin Name | <-> | Pin Nummer | Pin Name
 * Das pconoff script muss in das Homeverzeichnis hinzugefügt werden.
 * Zur Verbindung wird SSH verwendet. Hierbei ist ein Key zu erstellen und die Konfiguration abzuändern, sodass nur mit dem Key ein Login möglich ist.
 * Eine lokale Verbindung über VNC Viewer ist möglich
-* Zusätzlich benötigt der PI eine fixe IP-Adresse im Netzwerk und ein Routing am Router muss eingerichtet werden.
+* Die Verbindung ohne Key ist zu unterbinden um die Sicherheit zu erhöhen.
+* Zusätzlich benötigt der PI eine fixe IP-Adresse im Netzwerk.
+* Das Routing wird wie in den Bildern "T-Mobile_Router_Einstellung*" ersichtlich eingestellt. Die IP muss die des Raspberry PIs entsprechen. Danach ist der Router neu zu starten.
 
 Optional können die Scripte auch in andere Verzeichnisse hinterlegt werden. Hierzu müssen jedoch die Pfade angepasst werden.
 
@@ -42,6 +44,8 @@ Mit dem Befehl `pyhton3 pconoff.py 1` Kann das jeweilige Relay angesteuert werde
 
 ### Android:
 Far Commander
+- Der public Key mit Passwort ist hinzuzufügen. Für den Log-In benötigt man kein Passwort nur den Benutzernamen.
 
 ### Apple
 Termius - SSH client 
+- Der public Key mit Passwort ist hinzuzufügen. Für den Log-In benötigt man kein Passwort nur den Benutzernamen.

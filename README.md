@@ -28,9 +28,9 @@ Pin Nummer | Pin Name | <-> | Pin Nummer | Pin Name
 * Im home Verzeichnis wird das ddupdate.sh Script konfiguriert mit der jeweiligen Key und domain
 * Im crontab gehört der Eintrag für die Ausführung des scripts eingetragen. Beispielsweise jede Minute
 * Das pconoff script muss in das Homeverzeichnis hinzugefügt werden.
-* Zur Verbindung wird SSH verwendet. Hierbei ist ein Key zu erstellen und die Konfiguration abzuändern, sodass nur mit dem Key ein Login möglich ist.
+* Zur Verbindung wird SSH verwendet. Hierbei ist ein Key zu erstellen und die Konfiguration abzuändern, sodass nur mit dem Key ein Login möglich ist. (Siehe [Dokumentation](https://pimylifeup.com/raspberry-pi-ssh-keys/))
+* Die Verbindung ohne Key ist zu unterbrechen um die Sicherheit zu erhöhen.
 * Eine lokale Verbindung über VNC Viewer ist möglich
-* Die Verbindung ohne Key ist zu unterbinden um die Sicherheit zu erhöhen.
 * Zusätzlich benötigt der PI eine fixe IP-Adresse im Netzwerk.
 * Das Routing wird wie in den Bildern "T-Mobile_Router_Einstellung*" ersichtlich eingestellt. Die IP muss die des Raspberry PIs entsprechen. Danach ist der Router neu zu starten.
 

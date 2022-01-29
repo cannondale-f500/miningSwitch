@@ -2,7 +2,7 @@
 Raspberry PI with Relay Card AZDelivery 8-Relais Modul 5V mit Optokoppler Low-Level-Trigger
 
 
-## Aufbau
+## Hardware(Aufbau)
 Der Raspberry PI wird über ein Falchbandkabel mit dem 8-Relais Modul verbunden.
 
 Hierzu werden die folgenden PINs verwendet:

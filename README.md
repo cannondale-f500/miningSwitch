@@ -1,5 +1,5 @@
 # miningSwitch
-Raspberry PI with Relay Card AZDelivery 8-Relais Modul 5V mit Optokoppler Low-Level-Trigger
+Raspberry PI mit Relay Card AZDelivery 8-Relais Modul 5V mit Optokoppler Low-Level-Trigger Ansteuerung über Konsole (SSH) und über SSH-Apps.
 
 
 ## Hardware(Aufbau)

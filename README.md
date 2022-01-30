@@ -1,7 +1,9 @@
 # miningSwitch
 Raspberry PI with relais Card AZ-Delivery 8-Relais Modul 5V with optocoupler Low-Level-Trigger
-control by console (SSH) over SSH Apps to hard reset a computer with a pyhton script
-
+control by console (SSH) over SSH Apps to hard reset a computer with a pyhton script.
+The outputs of the relais card can be connected up to 8 power-switches of computers. The pins can be connected parallel to the switch.
+Therefore it is possible to switch on off or restart a computer via the internet.
+Actually there is only an implementation of a restart.
 
 ## Hardware(Aufbau)
 Der Raspberry PI wird über ein Falchbandkabel mit dem 8-Relais Modul verbunden.

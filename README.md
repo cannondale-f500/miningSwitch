@@ -1,6 +1,6 @@
 # miningSwitch
 Raspberry PI with relais Card AZ-Delivery 8-Relais Modul 5V with optocoupler Low-Level-Trigger
-control by console (SSH) over SSH Apps.
+control by console (SSH) over SSH Apps to hard reset a computer with a pyhton script
 
 
 ## Hardware(Aufbau)

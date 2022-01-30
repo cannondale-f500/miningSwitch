@@ -36,7 +36,12 @@ Pin Nummer | Pin Name | <-> | Pin Nummer | Pin Name
 * Zur Verbindung wird SSH verwendet. Hierbei ist ein Key zu erstellen und die Konfiguration abzuändern, sodass nur mit dem Key ein Login möglich ist. (Siehe [Dokumentation](https://pimylifeup.com/raspberry-pi-ssh-keys/))
 * Die Verbindung ohne Key ist zu unterbrechen um die Sicherheit zu erhöhen.
 * Eine lokale Verbindung über VNC Viewer ist möglich
-* Zusätzlich benötigt der PI eine fixe IP-Adresse im Netzwerk.
+* Zusätzlich benötigt der PI eine fixe IP-Adresse im Netzwerk. Dies geschieht durch anpassen des Files `/etc/dhcpcd.conf`:
+  `interface eth0
+  static ip_address=192.168.1.x/24
+  static routers=192.168.1.1
+  static domain_name_servers=192.168.1.1`
+
 * Das Routing wird wie in den Bildern "T-Mobile_Router_Einstellung*" ersichtlich eingestellt. Die IP muss die des Raspberry PIs entsprechen. Danach ist der Router neu zu starten.
 
 Optional können die Scripte auch in andere Verzeichnisse hinterlegt werden. Hierzu müssen jedoch die Pfade angepasst werden.

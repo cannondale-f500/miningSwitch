@@ -7,12 +7,12 @@ Actually there is only an implementation of a restart.
 
 *Read this in other languages: [English](README.md), [German](README-de.md).*
 
-## Hardware(Aufbau)
-Der Raspberry PI wird über ein Falchbandkabel mit dem 8-Relais Modul verbunden.
+## Hardware(Setup)
+The Raspberry PI is connected via a ribbon cable with the 8-relais module.
 
-Hierzu werden die folgenden PINs verwendet:
+The following connection has been used (others are possible by editing the script and startup):
 
-Pin Nummer | Pin Name | <-> | Pin Nummer | Pin Name
+pin number | pin name | <-> | pin number | pin name
 ---|---|---|---|---
 1 | GND | <-> | 20 | GND
 2 | K1 | <-> | 16 | GPIO23
@@ -27,9 +27,9 @@ Pin Nummer | Pin Name | <-> | Pin Nummer | Pin Name
 
 
 ## Software
-* Am RaspberryPI wird das aktuelle Image erstellt. 2021-10-30-raspios-bullseye-armhf-full
-* Die config.txt wird erweitert
-  Hiermit werden die Relays beim Einschalten des PIs ausgeschaltet und die GPIOs vorkonfiguriert
+* The raspberrypi image has to be downloaded and written on a SDcard. 2021-10-30-raspios-bullseye-armhf-full
+* Just adding the entry of config.txt with the entries of the repository
+  This is to initialize the GPIOs to Outputs and non active relais.
 * Im home Verzeichnis wird das ddupdate.sh Script konfiguriert mit der jeweiligen Key und domain
 * Im crontab gehört der Eintrag für die Ausführung des scripts eingetragen. Beispielsweise jede Minute
 * Das pconoff script muss in das Homeverzeichnis hinzugefügt werden.

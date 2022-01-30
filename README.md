@@ -5,6 +5,8 @@ The outputs of the relais card can be connected up to 8 power-switches of comput
 Therefore it is possible to switch on off or restart a computer via the internet.
 Actually there is only an implementation of a restart.
 
+*Read this in other languages: [English](README.md), [German](README-de.md).*
+
 ## Hardware(Aufbau)
 Der Raspberry PI wird über ein Falchbandkabel mit dem 8-Relais Modul verbunden.
 

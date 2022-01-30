@@ -27,30 +27,37 @@ pin number | pin name | <-> | pin number | pin name
 
 
 ## Software
-* The raspberrypi image has to be downloaded and written on a SDcard. 2021-10-30-raspios-bullseye-armhf-full
-* Just adding the entry of config.txt with the entries of the repository
+* The raspberrypi image has to be downloaded and written on a SDcard. `2021-10-30-raspios-bullseye-armhf-full`
+* Just adding the entry of `config.txt` with the entries of the repository
   This is to initialize the GPIOs to Outputs and non active relais.
-* Im home Verzeichnis wird das ddupdate.sh Script konfiguriert mit der jeweiligen Key und domain
-* Im crontab gehört der Eintrag für die Ausführung des scripts eingetragen. Beispielsweise jede Minute
-* Das pconoff script muss in das Homeverzeichnis hinzugefügt werden.
-* Zur Verbindung wird SSH verwendet. Hierbei ist ein Key zu erstellen und die Konfiguration abzuändern, sodass nur mit dem Key ein Login möglich ist. (Siehe [Dokumentation](https://pimylifeup.com/raspberry-pi-ssh-keys/))
-* Die Verbindung ohne Key ist zu unterbrechen um die Sicherheit zu erhöhen.
-* Eine lokale Verbindung über VNC Viewer ist möglich
-* Zusätzlich benötigt der PI eine fixe IP-Adresse im Netzwerk.
-* Das Routing wird wie in den Bildern "T-Mobile_Router_Einstellung*" ersichtlich eingestellt. Die IP muss die des Raspberry PIs entsprechen. Danach ist der Router neu zu starten.
+* Implement the `ddupdate.sh` script with key und domain
+* The `crontab` script on `/etc/crontab` should be added with the entries of the repository. The script will be executed every minute. Only If the IP changes the ddns entry will be updated
+* The `pconoff` script must be copied to the folder `/home/pi`
+* To execute the script remote a connection via SSH is used. To make a secure connection a key is used and the configuration has to be edited like in the following documentation. Its important to only accept connection via key (Siehe [Dokumentation](https://pimylifeup.com/raspberry-pi-ssh-keys/))
+* A local connection via VNC has been enabled in the settings via the menu.
+* Adding a fixed IP-adress in `/etc/dhcpcd.conf` like this:
 
-Optional können die Scripte auch in andere Verzeichnisse hinterlegt werden. Hierzu müssen jedoch die Pfade angepasst werden.
+  `interface eth0
+  
+  static ip_address=192.168.1.x/24
+  
+  static routers=192.168.1.1
+  
+  static domain_name_servers=192.168.1.1`
+* The routing setting should be implemented to the router shown in the images `T-Mobile_Router_Einstellung*`. The IP address must be set to the fixed IP address of the raspberry PI. Afterwards the router should be restarted.
 
-## Ansteuern
-Mit dem Befehl `pyhton3 pconoff.py 1` Kann das jeweilige Relay angesteuert werden und das jeweilige Relay führt folgenden Zyklus aus:
-* PC Ausschalten mit 5s Ein
-* Wartezeit mit 30s
-* PC Einschalten 0.5s Ein
+If prefered the scripts can be implemented to other folders. Therefore the path has to be changed
+
+## Controlling
+With the command `pyhton3 pconoff.py 1` every relais can be controlled with its number. The cycling of the relais is configured:
+* computer off (5s relais on)
+* waiting time for 30s
+* computer on (0.5s relais on)
 
 ### Android:
 Far Commander
-- Der public Key mit Passwort ist hinzuzufügen. Für den Log-In benötigt man kein Passwort nur den Benutzernamen.
+- The public Key with password has to be added. Be careful where the file will be stored or how you transfer the file. For login only the username has to be added.
 
 ### Apple
 Termius - SSH client 
-- Der public Key mit Passwort ist hinzuzufügen. Für den Log-In benötigt man kein Passwort nur den Benutzernamen.
+- The public Key with password has to be added. Be careful where the file will be stored or how you transfer the file. For login only the username has to be added.
